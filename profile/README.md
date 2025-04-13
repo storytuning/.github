@@ -1,75 +1,82 @@
 ## Hi there 👋
 
-# Storytuning - AI 모델 파인튜닝 플랫폼
+# Storytuning - AI Model Fine-tuning Platform
 
-## 🎯 프로젝트 개요
-Storytuning은 창작자의 콘텐츠(이미지)를 활용하여 AI 모델을 파인튜닝하고, 이를 통해 생성된 모델의 IP를 보호하고 수익을 창출할 수 있는 플랫폼입니다.
+## 🎯 Project Overview
+Storytuning is a platform that empowers creators to own and monetize AI models through content-based fine-tuning. It addresses the critical issue of intellectual property rights in the age of generative AI by allowing creators to maintain control over their style, content, and the AI models trained on them.
 
-## 🛠️ 기술 스택
+## 🛠️ Tech Stack
 - Frontend: Next.js, React, Material-UI, wagmi
 - Backend: Node.js, Express, Firebase
 - AI: PyTorch, diffusers, transformers
 - Storage: Pinata IPFS
 - Blockchain: Story Protocol
 
-## 📋 주요 기능
-1. 이미지 업로드 및 IPFS 저장
-2. Firebase를 통한 파인튜닝 요청 관리
-3. Google Colab에서의 실시간 파인튜닝 처리
-4. 파인튜닝된 모델을 활용한 이미지 생성
-5. 생성된 이미지의 IPFS 저장 및 Firebase 업데이트
+## 📋 Key Features
+1. Content Ownership: Creators fully own their fine-tuned models
+2. IP Registration: Models can be registered as IP on-chain using Story Protocol
+3. Licensing System: Users must purchase license tokens to use models
+4. Royalty Distribution: Automatic revenue split (60% creator, 30% platform, 10% AI infrastructure)
+5. Image Upload and IPFS Storage
+6. Real-time Fine-tuning Processing via Google Colab
+7. Image Generation using Fine-tuned Models
 
-## 🚀 시작하기
+## 🚀 Getting Started
 
-### 1. 환경 설정
-프로젝트 루트에 `.env` 파일을 생성하고 다음 내용을 입력하세요:
+### 1. Environment Setup
+Create a `.env` file in the project root with the following content:
 
 ```env
-# Firebase 설정
+# Firebase Configuration
 FIREBASE_DATABASE_URL=
 
-# Pinata 설정
+# Pinata Configuration
 PINATA_API_KEY=
 PINATA_API_SECRET=
 PINATA_JWT=
 
-# API 설정
+# API Configuration
 NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
-### 2. 패키지 설치
+### 2. Package Installation
 ```bash
-# 백엔드 패키지 설치
+# Install Backend Packages
 cd backend
 npm install
 
-# 프론트엔드 패키지 설치
+# Install Frontend Packages
 cd ../frontend
 npm install
 ```
 
-### 3. 서버 실행
+### 3. Server Start
 ```bash
-# 백엔드 서버 실행
+# Start Backend Server
 cd backend
 npm run dev
 
-# 프론트엔드 서버 실행 (새 터미널에서)
+# Start Frontend Server (in a new terminal)
 cd frontend
 npm run dev
 ```
 
-## 🔄 파인튜닝 프로세스
-1. 사용자가 이미지를 업로드하고 파인튜닝 요청
-2. Firebase에 요청 내역 저장
-3. Colab에서 Firebase 실시간 폴링
-4. Pinata에서 이미지 다운로드
-5. 이미지 기반 파인튜닝 실행
-6. 파인튜닝된 모델로 이미지 생성
-7. 생성된 이미지를 Pinata에 업로드
-8. Firebase에 결과 업데이트
+## 🔄 Fine-tuning Process
+1. Creator uploads images to the platform
+2. Images are registered as IP using Story Protocol
+3. Creator selects images and requests fine-tuning
+4. Model is trained via Colab-based pipeline
+5. Fine-tuned model is published to the platform
+6. Users can browse and purchase license tokens
+7. Revenue is automatically distributed to all parties
 
-## 📝 주의사항
-- `.env` 파일은 절대 깃헙에 커밋하지 마세요
-- API 키는 안전하게 보관하세요
-- 실제 배포 시에는 환경 변수를 적절히 설정해주세요
+## 📝 Important Notes
+- Never commit `.env` file to GitHub
+- Keep API keys secure
+- Configure environment variables appropriately for production deployment
+
+## 🗺️ Roadmap
+1. Phase 1: Launch MVP and test revenue logic with real users
+2. Phase 2: Automate fine-tuning backend and scale infrastructure
+3. Phase 3: Improve model quality and study base model training data
+4. Phase 4: Collaborate with AI infrastructure providers for high-performance models
